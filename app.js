@@ -7,6 +7,9 @@ const router = require('./router/index')
 const app = express()
 const PORT = 3000
 
+// app.set で指定する設定値は、全体で使われるので早い段階で設定しておく
+app.set('view engine', 'ejs')
+
 // router を使うときは app.get の代わりに app.use を使う
 // 第一引数にはパス、第二引数にはルーティング処理を実装したオブジェクト
 app.use('/', router)
