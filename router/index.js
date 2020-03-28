@@ -5,10 +5,11 @@ const router = express.Router()
 // GET/, GET/about にリクエストがあった場合の処理を router に実装する
 router
   .get('/', (req, res) => {
-    res.send('トップページ！')
+    // テンプレートエンジンを用いる際は、res.send ではなく res.render を使う
+    res.render('index')
   })
   .get('/about', (req, res) => {
-    res.send('アバウトページ！')
+    res.render('about')
   })
 
 // ルーティング処理の実装を行ったルーティングオブジェクトを外部に公開する
