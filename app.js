@@ -10,6 +10,9 @@ const PORT = 3000
 // app.set で指定する設定値は、全体で使われるので早い段階で設定しておく
 app.set('view engine', 'ejs')
 
+// express.static('public) で public ディレクトリを静的ファイル読み読み込みのルートパスに指定する
+app.use(express.static('public'))
+
 // router を使うときは app.get の代わりに app.use を使う
 // 第一引数にはパス、第二引数にはルーティング処理を実装したオブジェクト
 app.use('/', router)
