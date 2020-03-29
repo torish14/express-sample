@@ -19,7 +19,7 @@ describe('Todo.findAll', () => {
         title: todo.title,
         body: todo.body,
         createdAt: todo.createdAt,
-        updateAt: todo.updateAt
+        updatedAt: todo.updatedAt
       })
     })
   })
